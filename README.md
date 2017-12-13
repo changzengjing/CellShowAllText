@@ -1,8 +1,9 @@
-#前言
+# 前言
 这是第一次发表自己的博客，一直不知道该写点什么东西，恰巧今天写了个App中比较常见的使用场景，列表页面列表每行显示的数据有限，不能完整的显示所有内容，通过点击UITableViewCell将不能完全展示的内容展示完全，再次点击会继续隐藏部分内容。Demo见：[CellShowAllText](https://github.com/IJTF/CellShowAllText)，效果如图：
+
 ![点击cell显示/隐藏全部内容.gif](https://raw.githubusercontent.com/TalkingJourney/CellShowAllText/master/Demo.gif)
 
-#实现思路
+# 实现思路
 1、通过自动布局方式设置UILabel在TableViewCell的位置，必须保证Label的top、left、right、bottom都有约束条件(本例子布局使用[Masonry](https://github.com/SnapKit/Masonry))；
 2、在给TableViewCell传入的模型添加一个字段open，标记TableViewCell内容是否打开，如果打开将Label的numberOfLines设置为0，关闭值为1；
 ```
